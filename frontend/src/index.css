@@ -72,3 +72,7 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
+
+#refreshBtn {
+    margin-bottom: 1rem;
+}

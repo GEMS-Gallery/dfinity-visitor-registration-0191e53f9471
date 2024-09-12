@@ -51,14 +51,8 @@ actor VisitorManagement {
     }
   };
 
-  public shared query(msg) func getVisitors() : async [Visitor] {
-    assert(isManager(msg.caller));
+  public query func getVisitors() : async [Visitor] {
     visitors
-  };
-
-  func isManager(caller: Principal) : Bool {
-    // In a real-world scenario, you'd check if the caller is in the list of authorized managers
-    true
   };
 
   system func preupgrade() {

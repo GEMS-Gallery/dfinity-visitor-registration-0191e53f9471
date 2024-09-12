@@ -10,8 +10,10 @@ const confirmation = document.getElementById('confirmation');
 const hostSelect = document.getElementById('host');
 const visitorBtn = document.getElementById('visitorBtn');
 const managerBtn = document.getElementById('managerBtn');
+const refreshBtn = document.getElementById('refreshBtn');
 
 let authClient;
+let refreshInterval;
 
 async function initAuth() {
     authClient = await AuthClient.create();
@@ -24,12 +26,14 @@ visitorBtn.addEventListener('click', () => {
     visitorSection.style.display = 'block';
     managerSection.style.display = 'none';
     dashboard.style.display = 'none';
+    clearInterval(refreshInterval);
 });
 
 managerBtn.addEventListener('click', () => {
     visitorSection.style.display = 'none';
     managerSection.style.display = 'block';
     dashboard.style.display = 'none';
+    clearInterval(refreshInterval);
 });
 
 // Populate host dropdown
@@ -78,6 +82,7 @@ loginForm.addEventListener('submit', async (e) => {
             managerSection.style.display = 'none';
             dashboard.style.display = 'block';
             loadVisitorLogs();
+            startAutoRefresh();
         } else {
             alert('Invalid credentials');
         }
@@ -105,3 +110,11 @@ async function loadVisitorLogs() {
         alert('An error occurred while loading visitor logs.');
     }
 }
+
+// Start auto-refresh
+function startAutoRefresh() {
+    refreshInterval = setInterval(loadVisitorLogs, 30000); // Refresh every 30 seconds
+}
+
+// Manual refresh
+refreshBtn.addEventListener('click', loadVisitorLogs);
