@@ -1,0 +1,12 @@
+type Visitor = 
+ record {
+   host: text;
+   name: text;
+   reason: text;
+   timestamp: int;
+ };
+service : {
+  addVisitor: (text, text, text) -> ();
+  getHosts: () -> (vec text) query;
+  getVisitors: () -> (vec Visitor) query;
+}
