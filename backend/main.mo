@@ -68,5 +68,6 @@ actor VisitorManagement {
   system func postupgrade() {
     // Initialize managers after upgrade
     managers.put("admin", "password123");
+    managers.put("Manager", "Manager");
   };
 }
