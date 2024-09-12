@@ -6,7 +6,9 @@ type Visitor =
    timestamp: int;
  };
 service : {
+  addManager: (text, text) -> ();
   addVisitor: (text, text, text) -> ();
   getHosts: () -> (vec text) query;
   getVisitors: () -> (vec Visitor) query;
+  login: (text, text) -> (bool) query;
 }
