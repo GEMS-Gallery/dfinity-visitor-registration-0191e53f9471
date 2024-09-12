@@ -48,6 +48,7 @@ async function populateHosts() {
         });
     } catch (error) {
         console.error('Error fetching hosts:', error);
+        alert('Much error, very sad. No hosts found.');
     }
 }
 
@@ -66,7 +67,7 @@ visitorForm.addEventListener('submit', async (e) => {
         confirmation.style.display = 'block';
     } catch (error) {
         console.error('Error adding visitor:', error);
-        alert('An error occurred. Please try again.');
+        alert('Wow, such error. Much sadness. Please try again.');
     }
 });
 
@@ -84,11 +85,11 @@ loginForm.addEventListener('submit', async (e) => {
             loadVisitorLogs();
             startAutoRefresh();
         } else {
-            alert('Invalid credentials');
+            alert('Much fail. Very wrong. Try again, hooman!');
         }
     } catch (error) {
         console.error('Error logging in:', error);
-        alert('An error occurred. Please try again.');
+        alert('System machine broke. Have a nice day.');
     }
 });
 
@@ -107,7 +108,7 @@ async function loadVisitorLogs() {
         });
     } catch (error) {
         console.error('Error fetching visitor logs:', error);
-        alert('An error occurred while loading visitor logs.');
+        alert('Cannot fetch logs. Cats probably ate them.');
     }
 }
 
@@ -117,4 +118,7 @@ function startAutoRefresh() {
 }
 
 // Manual refresh
-refreshBtn.addEventListener('click', loadVisitorLogs);
+refreshBtn.addEventListener('click', () => {
+    loadVisitorLogs();
+    alert('Wow, such refresh! Very update!');
+});

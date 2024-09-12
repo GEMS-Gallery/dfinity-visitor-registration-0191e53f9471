@@ -3,54 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hipster Visitor Management</title>
+    <title>Much Visitor, Very Management</title>
     <link rel="stylesheet" href="src/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="app">
+        <h1 class="rainbow-text">Such Visitor, Much Management</h1>
         <nav>
-            <button id="visitorBtn" class="btn">Visitor Check-In</button>
-            <button id="managerBtn" class="btn">Manager Login</button>
+            <button id="visitorBtn" class="btn">I Can Has Check-In?</button>
+            <button id="managerBtn" class="btn">Manager Login (No Cats Allowed)</button>
         </nav>
         <div id="visitorSection" class="section">
-            <h1>Visitor Check-In</h1>
+            <h2>Visitor Check-In (or Check-Out, we don't judge)</h2>
             <form id="visitorForm">
-                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="text" id="name" placeholder="Your Name (or your cat's name)" required>
                 <select id="reason" required>
-                    <option value="">Select Reason</option>
-                    <option value="Meeting">Meeting</option>
-                    <option value="Interview">Interview</option>
-                    <option value="Delivery">Delivery</option>
+                    <option value="">Y U Here?</option>
+                    <option value="Meeting">Important Cat Video Meeting</option>
+                    <option value="Interview">Meme Creator Interview</option>
+                    <option value="Delivery">Cheezburger Delivery</option>
                 </select>
                 <select id="host" required>
-                    <option value="">Select Host</option>
+                    <option value="">Who Dis?</option>
                 </select>
-                <button type="submit" class="btn">Check In</button>
+                <button type="submit" class="btn">Do A Check-In</button>
             </form>
             <div id="confirmation" style="display: none;">
-                <h2>Thank You!</h2>
-                <p>Your visit has been registered.</p>
+                <h2>Much Success!</h2>
+                <p>Your visit has been registered. You may now proceed to pet all the office cats.</p>
+                <img src="https://i.kym-cdn.com/entries/icons/original/000/000/638/Ceilingcat.jpg" alt="Ceiling Cat is watching you" style="width: 200px;">
             </div>
         </div>
         <div id="managerSection" class="section" style="display: none;">
-            <h1>Manager Login</h1>
+            <h2>Manager Login (Serious Business Time)</h2>
             <form id="loginForm">
-                <input type="text" id="username" placeholder="Username" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <button type="submit" class="btn">Login</button>
+                <input type="text" id="username" placeholder="Username (No 'password' allowed)" required>
+                <input type="password" id="password" placeholder="Password (Must contain at least one cat emoji)" required>
+                <button type="submit" class="btn">Login (If You Dare)</button>
             </form>
         </div>
         <div id="dashboard" class="section" style="display: none;">
-            <h1>Visitor Logs</h1>
-            <button id="refreshBtn" class="btn">Refresh Logs</button>
+            <h2>Visitor Logs (AKA 'Who Let The Cats In?')</h2>
+            <button id="refreshBtn" class="btn">Refresh Logs (It's F5 with extra steps)</button>
             <table id="visitorTable">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Reason</th>
-                        <th>Host</th>
-                        <th>Timestamp</th>
+                        <th>Name (Real or Imaginary)</th>
+                        <th>Reason (As if we care)</th>
+                        <th>Host (Probably a cat)</th>
+                        <th>Timestamp (When did this madness occur?)</th>
                     </tr>
                 </thead>
                 <tbody></tbody>

@@ -32,10 +32,10 @@ actor VisitorManagement {
 
   public query func getHosts() : async [Text] {
     [
-      "John Doe",
-      "Jane Smith",
-      "Mike Johnson",
-      "Emily Brown"
+      "Doge",
+      "Grumpy Cat",
+      "Nyan Cat",
+      "Keyboard Cat"
     ]
   };
 
